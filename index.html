@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hogwarts | Sorting Hat</title>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-home text-white">
+    
+    <div id="start-container" class="container h-screen w-screen px-12 py-4 lg:px-64 lg:py-24">
+      
+      <div class="container p-4 h-96 w-96 mb-12 sm:w-full bg-box rounded-2xl shadow-xl">
+        <div class="container flex justify-center items-center">
+          <img src="./crest.png" class="w-20">
+          <div class="font-jolly text-3xl md:text-4xl ml-2 text-center">
+            Welcome to the Hogwarts Sorting Hat!
+          </div>
+        </div>
+        <div class="container w-full justify-center flex mt-4">
+          <div class="font-jolly text-xl text-center md:mx-12 lg:mx-24">
+            Do you have the bravery of a <strong>Gryffindor?</strong> The cunning intellect of a <strong>Slytherin?</strong> Click below to find out!
+          </div>
+          
+        </div>
+        <div class="container w-full justify-center flex mt-4">
+          <button id="start-button" class="rounded-xl p-8 bg-slate-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-2xl">
+            Get Sorted!
+          </button>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div id = "question-container" class="container h-screen w-screen px-12 py-4 lg:px-64 lg:py-24 hidden">
+      
+      <div class="container p-4 h-96 w-96 sm:w-full bg-box rounded-2xl shadow-xl">
+        <div class="container flex justify-start items-center">
+          <img src="./crest.png" class="w-20">
+          <div id="question-text" class="font-jolly text-3xl md:text-4xl ml-2 text-left">
+            Question 1: What is your favorite color?
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 w-full justify-between items-center mt-4">
+          <button id="answer-1" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+            Red
+          </button>
+          <button id="answer-2" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+            Yellow
+          </button>
+          <button id="answer-3" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+            Green
+          </button>
+          <button id="answer-4" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+            Blue
+          </button>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div id="end-container" class="container h-screen w-screen px-12 py-4 lg:px-64 lg:py-24 hidden">
+      
+      <div id="end-background" class="container p-4 h-96 w-96 mb-12 sm:w-full rounded-2xl shadow-xl">
+        <div class="container flex justify-center items-center">
+          <div id="end-result" class="font-jolly mt-4 text-3xl md:text-5xl ml-2 text-center">
+            You are nothing.
+          </div>
+        </div>
+        <div class="container w-full justify-center flex mt-4">
+          <div id="end-text" class="font-jolly text-xl text-center md:mx-12 lg:mx-24">
+            You suck.
+          </div>
+          
+        </div>
+        <div class="container w-full justify-center flex mt-4">
+          <button id="end-button" class="rounded-xl p-8 bg-transparent border-2 border-white hover:shadow-lg hover:bg-slate-900 font-jolly font-semibold text-2xl">
+            Try again!
+          </button>
+        </div>
+        
+      </div>
+
+    </div>
+
+
+
+    <script src="./app.js"></script>
+
+  </body>
+
+</html>
