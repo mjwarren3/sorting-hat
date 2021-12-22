@@ -146,6 +146,10 @@ function goToNextQuestion(e) {
 }
 
 function showResults() {
+    endBackground.classList.remove("bg-green-800");
+    endBackground.classList.remove("bg-red-900");
+    endBackground.classList.remove("bg-blue-800");
+    endBackground.classList.remove("bg-orange-400");
     if (g === Math.max(r,s,g,h)) {
         endBackground.classList.add("bg-red-900")
         endResult.innerText = "You are a Gryffindor!"

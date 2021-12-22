@@ -10,9 +10,9 @@
   </head>
   <body class="bg-home text-white">
     
-    <div id="start-container" class="container h-screen w-screen px-12 py-4 lg:px-64 lg:py-24">
+    <div id="start-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48">
       
-      <div class="container p-4 h-96 w-96 mb-12 sm:w-full bg-box rounded-2xl shadow-xl">
+      <div class="container p-4 w-full h-full md:h-fit lg:pb-24 md:mt-16 bg-box rounded-2xl shadow-xl">
         <div class="container flex justify-center items-center">
           <img src="./crest.png" class="w-20">
           <div class="font-jolly text-3xl md:text-4xl ml-2 text-center">
@@ -35,16 +35,16 @@
 
     </div>
 
-    <div id = "question-container" class="container h-screen w-screen px-12 py-4 lg:px-64 lg:py-24 hidden">
+    <div id = "question-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48 hidden">
       
-      <div class="container p-4 h-96 w-96 sm:w-full bg-box rounded-2xl shadow-xl">
+      <div class="container p-4 w-full h-full md:h-fit lg:pb-24 md:mt-16 bg-box rounded-2xl shadow-xl">
         <div class="container flex justify-start items-center">
           <img src="./crest.png" class="w-20">
           <div id="question-text" class="font-jolly text-3xl md:text-4xl ml-2 text-left">
             Question 1: What is your favorite color?
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-2 w-full justify-between items-center mt-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full justify-between items-center mt-4">
           <button id="answer-1" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
             Red
           </button>
@@ -63,9 +63,9 @@
 
     </div>
 
-    <div id="end-container" class="container h-screen w-screen px-12 py-4 lg:px-64 lg:py-24 hidden">
+    <div id="end-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48 hidden">
       
-      <div id="end-background" class="container p-4 h-96 w-96 mb-12 sm:w-full rounded-2xl shadow-xl">
+      <div id="end-background" class="container p-4 w-full h-full md:h-fit  lg:pb-24 md:mt-16 rounded-2xl shadow-xl bg-red-900 bg-blue-800 bg-green-800 bg-orange-400">
         <div class="container flex justify-center items-center">
           <div id="end-result" class="font-jolly mt-4 text-3xl md:text-5xl ml-2 text-center">
             You are nothing.
