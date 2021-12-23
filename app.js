@@ -36,12 +36,12 @@ const questions = [
         ]
     },
     {
-        question: 'Which adjective best describes you?',
+        question: 'Which word would your friends use to describe you?',
         answers: [
             { text: 'Smart', group: 'r' },
             { text: 'Courageous', group: 'g' },
             { text: 'Ambitious', group: 's' },
-            { text: 'Loyal', group: 'h' },
+            { text: 'Kind', group: 'h' },
         ]
     },
     {
