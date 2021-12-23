@@ -12,7 +12,7 @@
     
     <div id="start-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48">
       
-      <div class="container p-4 w-full h-full md:h-fit lg:pb-24 md:mt-16 bg-box rounded-2xl shadow-xl">
+      <div class="container p-4 w-full h-full md:h-fit lg:pb-12 md:mt-12 md:mb-12 bg-box rounded-2xl shadow-xl">
         <div class="container flex justify-center items-center">
           <img src="./crest.png" class="w-32">
         </div>
@@ -37,9 +37,11 @@
 
     </div>
 
-    <div id = "question-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48 hidden">
+    <div id = "question-container" class="container hidden h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48">
       
-      <div class="container p-4 w-full h-full md:h-fit lg:pb-24 md:mt-16 bg-box rounded-2xl shadow-xl">
+      <div class="container p-4 w-full h-fit lg:pb-12 md:mt-12 md:mb-12 bg-box rounded-2xl shadow-xl">
+        <hr id="status-bar" class="my-2 mb-4 mx-4 border-2 border-green-300 w-1/6">
+        <div class="w-1/6 w-2/6 w-3/6 w-4/6 w-5/6"></div>
         <div class="container flex justify-start items-center">
           <img src="./crest.png" class="w-20">
           <div id="question-text" class="font-jolly text-3xl md:text-4xl ml-2 text-left">
@@ -47,31 +49,38 @@
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full justify-between items-center mt-4">
-          <button id="answer-1" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+          <button id="answer-1" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-2xl sm:text-2xl">
             Red
           </button>
-          <button id="answer-2" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+          <button id="answer-2" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-2xl sm:text-2xl">
             Yellow
           </button>
-          <button id="answer-3" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+          <button id="answer-3" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-2xl sm:text-2xl">
             Green
           </button>
-          <button id="answer-4" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-lg sm:text-2xl">
+          <button id="answer-4" class="rounded-xl py-8 px-2 bg-slate-900 border-2 border-slate-700 hover:shadow-lg sm:hover:bg-black font-jolly font-semibold text-2xl sm:text-2xl">
             Blue
           </button>
         </div>
-        
+        <div class="container w-full justify-center flex mt-4">
+          <button id="start-over" class="rounded-xl py-2 px-6 bg-green-900 border-2 border-slate-700 hover:shadow-lg hover:bg-black font-jolly font-semibold text-md">
+            Start Over
+          </button>
+        </div>
       </div>
 
     </div>
 
     <div id="end-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48 hidden">
       
-      <div id="end-background" class="container p-4 w-full h-full md:h-fit  lg:pb-24 md:mt-16 rounded-2xl shadow-xl bg-red-900 bg-blue-800 bg-green-800 bg-orange-400">
+      <div id="end-background" class="container p-4 w-full h-full md:h-fit  lg:pb-12 md:mt-12 md:mb-12 rounded-2xl shadow-xl bg-red-900 bg-blue-800 bg-green-800 bg-black">
         <div class="container flex justify-center items-center">
           <div id="end-result" class="font-jolly mt-4 text-3xl md:text-5xl ml-2 text-center">
             You are nothing.
           </div>
+        </div>
+        <div class="container flex justify-center items-center">
+          <img src="./huff.png" id="end-image" class="w-32 pt-2"></img>
         </div>
         <div class="container w-full justify-center flex mt-4">
           <div id="end-text" class="font-jolly text-xl text-center md:mx-12 lg:mx-24">
@@ -80,7 +89,7 @@
           
         </div>
         <div class="container w-full justify-center flex mt-4">
-          <button id="end-button" class="rounded-xl p-8 bg-transparent border-2 border-white hover:shadow-lg hover:bg-slate-900 font-jolly font-semibold text-2xl">
+          <button id="end-button" class="rounded-xl py-4 px-8 bg-transparent border-2 border-white hover:shadow-lg hover:bg-slate-900 font-jolly font-semibold text-2xl">
             Try again!
           </button>
         </div>

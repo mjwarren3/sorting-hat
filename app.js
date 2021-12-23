@@ -14,6 +14,9 @@ const endContainer = document.getElementById("end-container");
 const endResult = document.getElementById("end-result");
 const endText = document.getElementById("end-text");
 const endButton = document.getElementById("end-button");
+const statusBar = document.getElementById("status-bar");
+const endImage = document.getElementById("end-image");
+const startOverButton = document.getElementById("start-over");
 
 // Custom variables
 var shuffledQuestions = 1
@@ -24,20 +27,20 @@ var g = 0
 var h = 0
 const questions = [
     {
-        question: 'What is your favorite color?',
+        question: 'Which subject did you excel at most in school?',
         answers: [
-            { text: 'Blue', group: 'r' },
-            { text: 'Green', group: 's' },
-            { text: 'Red', group: 'g' },
-            { text: 'Yellow', group: 'h' },
+            { text: 'History', group: 'h' },
+            { text: 'Math', group: 's' },
+            { text: 'Science', group: 'r' },
+            { text: 'Phys Ed', group: 'g' },
         ]
     },
     {
         question: 'Which adjective best describes you?',
         answers: [
             { text: 'Smart', group: 'r' },
-            { text: 'Evil', group: 's' },
-            { text: 'Strong', group: 'g' },
+            { text: 'Courageous', group: 'g' },
+            { text: 'Ambitious', group: 's' },
             { text: 'Loyal', group: 'h' },
         ]
     },
@@ -51,16 +54,16 @@ const questions = [
         ]
     },
     {
-        question: 'What activity do you enjoy most?',
+        question: 'What activity do you enjoy doing most?',
         answers: [
-            { text: 'Making Evil Plans', group: 's' },
-            { text: 'Hiking', group: 'h' },
-            { text: 'Reading', group: 'r' },
-            { text: 'Sports', group: 'g' },
+            { text: 'Learning a New Skill', group: 's' },
+            { text: 'Hiking a Mountain', group: 'h' },
+            { text: 'Reading a Book', group: 'r' },
+            { text: 'Playing Sports', group: 'g' },
         ]
     },
     {
-        question: 'Which house do you want to be in?',
+        question: 'Which Hogwarts house do you want to be in?',
         answers: [
             { text: 'Gryffindor', group: 'r' },
             { text: 'Ravenclaw', group: 's' },
@@ -77,6 +80,7 @@ answerTwo.addEventListener("click", goToNextQuestion);
 answerThree.addEventListener("click", goToNextQuestion);
 answerFour.addEventListener("click", goToNextQuestion);
 endButton.addEventListener("click", startOver);
+startOverButton.addEventListener("click", startOver);
 
 
 // Functions
@@ -85,6 +89,8 @@ function startQuiz () {
     startContainer.classList.add('hidden');
     questionContainer.classList.remove('hidden');
     currentQuestionIndex = 0;
+    statusBar.classList.remove("w-5/6");
+    statusBar.classList.add("w-"+(currentQuestionIndex+1)+"/6");
     setNextQuestion();
 }
 
@@ -124,7 +130,9 @@ function setNextQuestion () {
 }
 
 function goToNextQuestion(e) {
+    statusBar.classList.remove("w-"+(currentQuestionIndex+1)+"/6");
     currentQuestionIndex = currentQuestionIndex + 1;
+    statusBar.classList.add("w-"+(currentQuestionIndex+1)+"/6");
     console.log(e.target);
     target = e.target
     if (target.classList.contains('r')) {
@@ -149,33 +157,38 @@ function showResults() {
     endBackground.classList.remove("bg-green-800");
     endBackground.classList.remove("bg-red-900");
     endBackground.classList.remove("bg-blue-800");
-    endBackground.classList.remove("bg-orange-400");
+    endBackground.classList.remove("bg-black");
     if (g === Math.max(r,s,g,h)) {
         endBackground.classList.add("bg-red-900")
         endResult.innerText = "You are a Gryffindor!"
-        endText.innerText = "You are a brave soul."
+        endText.innerText = "Gryffindors are associated with daring, bravery, nerve and chivalry. Gryffindors can also be cocky and restless."
+        endImage.src = "./gryff.png"
     } else if (r === Math.max(r,s,g,h)) {
         endBackground.classList.add("bg-blue-800")
         endResult.innerText = "You are a Ravenclaw!"
-        endText.innerText = "You are a smart soul."
+        endText.innerText = "Ravenclaws possess the traits of cleverness, wisdom, wit, intellectual ability and creativity."
+        endImage.src = "./rave.png"
     } else if (h === Math.max(r,s,g,h)) {
-        endBackground.classList.add("bg-orange-400")
+        endBackground.classList.add("bg-black")
         endResult.innerText = "You are a Hufflepuff!"
-        endText.innerText = "You are a loyal soul."
+        endText.innerText = "Hufflepuff characteristics include a strong sense of justice, loyalty, patience, and a propensity for hard work. Hufflepuffs are also seen as nice, almost to a fault."
+        endImage.src = "./huff.png"
     } else if (s === Math.max(r,s,g,h)) {
         endBackground.classList.add("bg-green-800")
         endResult.innerText = "You are a Slytherin!"
-        endText.innerText = "You are an evil soul."
+        endText.innerText = "Slytherins tended to be ambitious, shrewd, cunning, strong leaders, and achievement-oriented."
+        endImage.src = "./slyth.png"
     }
 }
 
 function startOver() {
+    
     startContainer.classList.remove('hidden');
     endContainer.classList.add('hidden');
     endBackground.classList.remove("bg-green-800");
     endBackground.classList.remove("bg-red-900");
     endBackground.classList.remove("bg-blue-800");
-    endBackground.classList.remove("bg-orange-400");
+    endBackground.classList.remove("bg-black");
     r = 0
     s = 0
     g = 0
