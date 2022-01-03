@@ -185,6 +185,7 @@ function startOver() {
     
     startContainer.classList.remove('hidden');
     endContainer.classList.add('hidden');
+    questionContainer.classList.add('hidden');
     endBackground.classList.remove("bg-green-800");
     endBackground.classList.remove("bg-red-900");
     endBackground.classList.remove("bg-blue-800");
