@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hogwarts | Sorting Hat</title>
-    <link rel="stylesheet" href="tailwind.css" />
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="tailwind-full.css" />
     <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-home text-white flex justify-center">
     
-    <div id="start-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48">
+    <div id="start-container" class="container align-middle items-center h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48">
       
       <div class="container p-4 w-full h-fit lg:pb-12 md:mt-12 md:mb-12 bg-box rounded-2xl shadow-xl">
         <div class="container flex justify-center items-center">
@@ -34,6 +35,10 @@
         </div>
         
       </div>
+
+      <footer class="pb-4 mt-4 flex justify-center align-center text-xs">
+        <div >🏀 Made by <a href="https://mikewarren.dev" target="_blank" class="underline" >Mike Warren</a></div>
+      </footer>
 
     </div>
 
@@ -69,6 +74,10 @@
         </div>
       </div>
 
+      <footer class="pb-4 mt-4 flex justify-center align-center text-xs">
+        <div >🏀 Made by <a href="https://mikewarren.dev" target="_blank" class="underline" >Mike Warren</a></div>
+      </footer>
+
     </div>
 
     <div id="end-container" class="container h-screen w-screen p-4 sm:px-12 sm:py-4 lg:px-48 hidden">
@@ -90,18 +99,23 @@
         </div>
         <div class="container w-full justify-center flex mt-4">
           <button id="end-button" class="rounded-xl py-4 px-8 mb-8 bg-transparent border-2 border-white hover:shadow-lg hover:bg-slate-900 font-jolly font-semibold text-2xl">
-            Try again!
+            Sort again!
           </button>
         </div>
         
       </div>
 
+      <footer class="pb-4 mt-4 flex justify-center align-center text-xs">
+        <div >🏀 Made by <a href="https://mikewarren.dev" target="_blank" class="underline" >Mike Warren</a></div>
+      </footer>
+
     </div>
-
-
 
     <script src="./app.js"></script>
 
   </body>
+</div>
+
+
 
 </html>
